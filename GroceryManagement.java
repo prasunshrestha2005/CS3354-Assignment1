@@ -1,10 +1,8 @@
 /**
  * GroceryManagement
  *
- * Base structure for grocery inventory system.
+ * Base structure for the grocery inventory system.
  */
-
-import java.util.Scanner;
 
 public class GroceryManagement {
 
@@ -14,7 +12,7 @@ public class GroceryManagement {
         double[] itemPrices = new double[10];
         int[] itemStocks = new int[10];
 
-        // Sample data
+        // Sample Data
         itemNames[0] = "Milk";
         itemPrices[0] = 2.99;
         itemStocks[0] = 10;
@@ -26,7 +24,5 @@ public class GroceryManagement {
         itemNames[2] = "Eggs";
         itemPrices[2] = 3.49;
         itemStocks[2] = 15;
-
-        
     }
 }

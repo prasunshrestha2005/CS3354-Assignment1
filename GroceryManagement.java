@@ -1,28 +1,22 @@
 /**
- * GroceryManagement
- *
- * Base structure for the grocery inventory system.
+ * Restocks item if searched.
+ * Adds stock once item is found.
+ * If not found, prints "Item not found."
  */
+public static void restockItem(String[] names, int[] stocks, String target, int amount) {
 
-public class GroceryManagement {
+    boolean found = false;
 
-    public static void main(String[] args) {
+    for (int i = 0; i < names.length; i++) {
+        if (names[i] != null && names[i].equalsIgnoreCase(target)) {
+            stocks[i] = stocks[i] + amount;
+            System.out.println("Item restocked. New stock: " + stocks[i]);
+            found = true;
+            break;
+        }
+    }
 
-        String[] itemNames = new String[10];
-        double[] itemPrices = new double[10];
-        int[] itemStocks = new int[10];
-
-        // Sample Data
-        itemNames[0] = "Milk";
-        itemPrices[0] = 2.99;
-        itemStocks[0] = 10;
-
-        itemNames[1] = "Bread";
-        itemPrices[1] = 1.99;
-        itemStocks[1] = 20;
-
-        itemNames[2] = "Eggs";
-        itemPrices[2] = 3.49;
-        itemStocks[2] = 15;
+    if (!found) {
+        System.out.println("Item not found.");
     }
 }

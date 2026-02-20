@@ -7,6 +7,12 @@ import java.util.Scanner;
 public class GroceryManagement {
 
     /**
+     * Creates a GroceryManagement instance.
+     */
+    public GroceryManagement() {
+    }
+
+    /**
      * Program entry point. Provides a menu to view inventory, restock items, or
      * exit.
      *

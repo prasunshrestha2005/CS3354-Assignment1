@@ -77,8 +77,8 @@ public class GroceryManagement {
         for (int i = 0; i < names.length; i++) {
             if (names[i] != null) {
                 System.out.println("Item: " + names[i] +
-                                   " | Price: $" + prices[i] +
-                                   " | Stock: " + stocks[i]);
+                        " | Price: $" + prices[i] +
+                        " | Stock: " + stocks[i]);
             } else {
                 // empty slot — skip
             }

@@ -87,6 +87,8 @@ public class GroceryManagement {
 
     /**
      * Restocks an item by name.
+     * Adds stock once item is found.
+     * If not found, prints "Item not found."
      *
      * @param names  array of item names
      * @param stocks array of item stock quantities
@@ -94,6 +96,19 @@ public class GroceryManagement {
      * @param amount amount to add
      */
     public static void restockItem(String[] names, int[] stocks, String target, int amount) {
-        // Implemented in feature-restock branch
+        boolean found = false;
+
+        for (int i = 0; i < names.length; i++) {
+            if (names[i] != null && names[i].equalsIgnoreCase(target)) {
+                stocks[i] = stocks[i] + amount;
+                System.out.println("Item restocked. New stock: " + stocks[i]);
+                found = true;
+                break;
+            }
+        }
+
+        if (!found) {
+            System.out.println("Item not found.");
+        }
     }
 }

@@ -66,14 +66,23 @@ public class GroceryManagement {
     }
 
     /**
-     * Displays the inventory of items.
+     * Displays the inventory of items that are not null.
      *
      * @param names  array of item names
      * @param prices array of item prices
      * @param stocks array of item stock quantities
      */
     public static void printInventory(String[] names, double[] prices, int[] stocks) {
-        // Implemented in feature-display branch
+        System.out.println("\n--- Current Inventory ---");
+        for (int i = 0; i < names.length; i++) {
+            if (names[i] != null) {
+                System.out.println("Item: " + names[i] +
+                                   " | Price: $" + prices[i] +
+                                   " | Stock: " + stocks[i]);
+            } else {
+                // empty slot — skip
+            }
+        }
     }
 
     /**
